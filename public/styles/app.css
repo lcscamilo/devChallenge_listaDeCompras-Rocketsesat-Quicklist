@@ -1,0 +1,60 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & nav {
+    margin-inline: auto;
+  }
+
+  & > div {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: var(--py-xl);
+  }
+
+  & .btn-back {
+    all: unset;
+
+    font: var(--link);
+    color: var(--color-brand);
+
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-brand-hover);
+    }
+  }
+}
+
+main {
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2.75rem;
+
+  & form {
+    flex-direction: column;
+    gap: 1rem;
+
+    & label {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  main {
+    & form {
+      flex-direction: row;
+      justify-content: space-between;
+
+      & input {
+        flex: 1;
+      }
+
+      & button {
+        width: 10em;
+      }
+    }
+  }
+}

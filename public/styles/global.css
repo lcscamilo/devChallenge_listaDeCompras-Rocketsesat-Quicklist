@@ -38,6 +38,13 @@
   --label: 600 1rem/1.25rem var(--ff-base);
   --paragraph: 500 1rem/1.5rem var(--ff-base);
   --link: 500 0.875rem/1rem var(--ff-base);
+
+  /* paddings */
+  --py-base: 1rem;
+  --py-lg: 1.5rem;
+  --py-xl: 3rem;
+
+  --px-lg: 1.5rem;
 }
 
 html {
@@ -47,6 +54,11 @@ html {
 
 body {
   background-color: var(--bg-primary);
+  padding: 1rem;
+}
+
+h1 {
+  font: var(--title);
 }
 
 a {
@@ -55,4 +67,12 @@ a {
 
 ul {
   list-style: none;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --title: 900 1.5rem/2rem var(--ff-base);
+
+    --py-xl: 3.5rem;
+  }
 }

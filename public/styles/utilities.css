@@ -1,0 +1,29 @@
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - 3rem);
+  /* border: 2px solid white; */
+  margin-inline: auto;
+}
+
+.d-flex {
+  display: flex;
+  --display: flex;
+}
+.d-grid {
+  display: grid;
+  --display: grid;
+}
+
+.only-desktop {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  & .container {
+    --max-width: 40em;
+  }
+
+  & .only-desktop {
+    display: var(--display, block); /* fallback = block */
+  }
+}
