@@ -17,7 +17,9 @@
   <body>
     <header class="container">
       <nav class="only-desktop">
-        <img src="public/assets/logo.svg" alt="Quicklist logo" />
+        <a href="#">
+          <img src="public/assets/logo.svg" alt="Quicklist logo" />
+        </a>
       </nav>
       <div class="d-flex">
         <a href="#" class="btn-back"><- Voltar</a>
@@ -32,15 +34,44 @@
         <button id="add-button" type="submit">Adicionar item</button>
       </form>
       <ul id="list">
-        <li>Pão de forma</li>
-        <li>Café preto</li>
-        <li>Suco de laranja</li>
-        <li>Bolacha</li>
+        <li class="item">
+          <span class="item-checkbox">
+            <div class="item-checkbox-image"></div>
+            <input type="checkbox" />
+          </span>
+          <span class="item-content">Pano de prato</span>
+          <button class="item-delete" type="button">
+            <img
+              src="public/assets/icons/delete-icon.svg"
+              alt="ícone de lixeira"
+            />
+          </button>
+        </li>
+        <li class="item">
+          <span class="item-checkbox">
+            <div class="item-checkbox-image"></div>
+            <input type="checkbox" />
+          </span>
+          <span class="item-content">Pano de prato</span>
+          <button class="item-delete" type="button">
+            <img
+              src="public/assets/icons/delete-icon.svg"
+              alt="ícone de lixeira"
+            />
+          </button>
+        </li>
       </ul>
     </main>
-    <footer class="container d-flex">
+    <div class="alert d-flex container">
+      <img src="public/assets/icons/warning-circle-filled.svg" alt="" />
+      <span>O item foi removido da lista</span>
+      <button class="alert-close" type="button">
+        <img src="public/assets/icons/delete-small.svg" alt="" />
+      </button>
+    </div>
+    <footer class="container d-flex" style="display: none">
       <img src="" alt="" />
-      <p>Rockeseat project by LCamiloS</p>
+      <p>Rocketseat project by LCamiloS</p>
     </footer>
 
     <script src="public/js/script.js"></script>

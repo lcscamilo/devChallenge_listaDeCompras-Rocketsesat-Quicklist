@@ -39,11 +39,170 @@ main {
     & label {
       display: none;
     }
+
+    & input {
+      appearance: none;
+      width: 100%;
+      height: calc(44rem / 16);
+      border-radius: 12px;
+      background-color: var(--bg-secondary);
+      padding-inline: calc(18rem / 16);
+      border: 2px solid var(--border-primary);
+
+      &:hover {
+        border-color: var(--border-hover);
+      }
+
+      &:focus {
+        border-color: var(--color-brand);
+        outline: 0;
+      }
+    }
+
+    & button {
+      height: calc(44rem / 16);
+      border-radius: 12px;
+      background-color: var(--color-brand);
+      color: var(--always-white);
+      padding-inline: calc(18rem / 16);
+      border: 0;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-brand-hover);
+        border: 0;
+        /* outline: 0.25rem solid var(--color-brand); */
+        outline: 0;
+      }
+    }
+  }
+}
+
+#list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-block: 2.5rem;
+
+  /* & span {
+    display: flex;
+    justify-items: center;
+  } */
+
+  & .item {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.75rem;
+    background-color: var(--bg-secondary);
+
+    & span,
+    & button {
+      all: unset;
+      display: flex;
+      align-items: center;
+    }
+
+    & .item-checkbox {
+      justify-content: center;
+      height: 1rem;
+      width: 1rem;
+      position: relative;
+
+      & [type="checkbox"] {
+        all: unset;
+        /* background-color: black; */
+        position: absolute;
+        /* só lembrando deixa top, bottom, left e right 0 */
+        inset: 0;
+      }
+
+      & .item-checkbox-image {
+        flex: 0 0 1rem;
+        height: 1rem;
+
+        background-image: url(../assets/icons/state=Default.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &:hover,
+      &:focus-within {
+        cursor: pointer;
+
+        & .item-checkbox-image {
+          background-image: url(../assets/icons/state=hover.svg);
+          /* filter: brightness(0.9); */
+        }
+      }
+
+      &:has(:checked) .item-checkbox-image {
+        background-image: url(../assets/icons/state=selected.svg);
+      }
+    }
+
+    & .item-content {
+      flex: 1;
+      /* no modelo do figma são 33px, mas não gostei deve ter sido erro deles */
+      height: 2rem;
+    }
+
+    & .item-delete {
+      justify-content: center;
+      height: 2rem;
+      width: 2rem;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        filter: brightness(0.2);
+      }
+    }
+  }
+}
+
+.alert {
+  /* troquei a posição para fixed,
+  porque quando a lista ficava muito grande não aparecia a mensagem 
+  de que o item tinha sido deletado */
+  position: fixed;
+  left: 50%;
+  bottom: 4rem;
+
+  transform: translateX(-50%); /* centraliza no eixo X */
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: calc(44rem / 16);
+  background-color: var(--color-danger);
+  border-radius: 0.75rem;
+  color: var(--always-white);
+  gap: 0.5rem;
+  padding: 0.75rem 0.75rem;
+
+  & span {
+    flex-grow: 1;
+  }
+
+  & .alert-close {
+    all: unset;
+    cursor: pointer;
+    margin-block: auto;
+
+    &:hover,
+    &:focus {
+      filter: brightness(0.75);
+    }
   }
 }
 
 @media (min-width: 40em) {
-  main {
+  & main {
     & form {
       flex-direction: row;
       justify-content: space-between;
@@ -56,5 +215,9 @@ main {
         width: 10em;
       }
     }
+  }
+
+  & #list {
+    margin-top: 1.125rem;
   }
 }

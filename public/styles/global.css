@@ -53,8 +53,10 @@ html {
 }
 
 body {
+  font: var(--paragraph);
   background-color: var(--bg-primary);
   padding: 1rem;
+  position: relative;
 }
 
 h1 {
