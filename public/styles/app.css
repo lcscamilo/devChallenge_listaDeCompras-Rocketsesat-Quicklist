@@ -171,7 +171,6 @@ main {
   position: fixed;
   left: 50%;
   bottom: 4rem;
-
   transform: translateX(-50%); /* centraliza no eixo X */
 
   display: flex;
@@ -184,6 +183,8 @@ main {
   color: var(--always-white);
   gap: 0.5rem;
   padding: 0.75rem 0.75rem;
+
+  transition: all 1s ease;
 
   & span {
     flex-grow: 1;
