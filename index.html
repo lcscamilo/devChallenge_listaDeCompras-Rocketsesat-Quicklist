@@ -28,8 +28,8 @@
     </header>
 
     <main class="container d-flex">
-      <form action="" method="get" class="d-flex">
-        <label for="new-item">Adicione um novo item</label>
+      <form id="add-form" action="" method="get" class="d-flex">
+        <label for="new-item" class="sr-only">Adicione um novo item</label>
         <input id="new-item" type="text" placeholder="Adicione um novo item" />
         <button id="add-button" type="submit">Adicionar item</button>
       </form>
@@ -40,7 +40,7 @@
             <input type="checkbox" />
           </span>
           <span class="item-content">Pano de prato</span>
-          <button class="item-delete" type="button">
+          <button class="item-delete" type="button" aria-label="Remover item">
             <img
               src="public/assets/icons/delete-icon.svg"
               alt="ícone de lixeira"
@@ -53,7 +53,7 @@
             <input type="checkbox" />
           </span>
           <span class="item-content">Pano de prato</span>
-          <button class="item-delete" type="button">
+          <button class="item-delete" type="button" aria-label="Remover item">
             <img
               src="public/assets/icons/delete-icon.svg"
               alt="ícone de lixeira"
@@ -62,7 +62,7 @@
         </li>
       </ul>
     </main>
-    <div class="alert d-flex container">
+    <div id="alert" class="d-flex container" role="status" aria-live="polite">
       <img src="public/assets/icons/warning-circle-filled.svg" alt="" />
       <span>O item foi removido da lista</span>
       <button class="alert-close" type="button">
