@@ -212,7 +212,7 @@ main {
 }
 
 #alert[data-visible="true"] {
-  transition: all 150ms ease;
+  transition: all 800ms ease;
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, 0);
