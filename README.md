@@ -33,13 +33,7 @@ Tudo isso com uma interface simples, estilizada e responsiva.
 ## 🎨 Layout
 
 Você pode visualizar o layout original no Figma:  
-[🔗 Acesse aqui](https://www.figma.com) _(é necessário ter conta para visualizar)._
-
----
-
-## 📷 Demonstração
-
-![Gif de funcionamento](./public/assets/demo.gif)
+[🔗 Acesse aqui](https://www.figma.com/community/file/1397279978314668489)
 
 ---
 
